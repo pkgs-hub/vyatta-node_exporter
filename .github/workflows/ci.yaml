@@ -19,7 +19,7 @@ jobs:
       - name: Download bin
         run: |
           url="https://github.com/prometheus/node_exporter/releases/download/v${{ env.VERSION }}/node_exporter-${{ env.VERSION }}.linux-amd64.tar.gz"
-          wget -O- ${url} | tar xz --strip-components=1 -C ./deb/opt/vyos-node_exporter
+          wget -O- ${url} | tar xz --strip-components=1 -C ./deb/opt/vyatta-node_exporter
 
       - name: Build deb
         run: |
