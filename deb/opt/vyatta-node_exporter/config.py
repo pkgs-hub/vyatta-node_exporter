@@ -26,7 +26,7 @@ def get_config(config=None):
     node_exporter = conf.get_config_dict(base, key_mangling=('-', '_'), get_first_key=True)
     node_exporter['config_file'] = config_file
 
-    return ssh
+    return node_exporter
 
 def verify(node_exporter):
     if not node_exporter:
