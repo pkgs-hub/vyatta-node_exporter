@@ -43,7 +43,7 @@ def generate(node_exporter):
             os.unlink(config_file)
         return None
 
-    with open('/opt/vyatta-node_exporter/config.j2') as tmpl, open(config_file, 'w') as out:
+    with open('/opt/vyatta-node_exporter/config.j2', 'r') as tmpl, open(config_file, 'w') as out:
         template = Template(tmpl.read()).render(**node_exporter)
         out.write(template)
 
