@@ -26,17 +26,17 @@ jobs:
           dpkg-deb --build --root-owner-group deb
 
       - name: Rename deb
-        run: mv deb.deb vyatta-node_exporter_$(dpkg-deb -f deb.deb Version)_$(dpkg-deb -f deb.deb Architecture).deb
+        run: mv deb.deb vyatta-node-exporter_$(dpkg-deb -f deb.deb Version)_$(dpkg-deb -f deb.deb Architecture).deb
 
       - name: Upload deb
         uses: actions/upload-artifact@v2
         with:
           name: debian-vyatta-node_exporter
-          path: "vyatta-node_exporter_*.deb"
+          path: "vyatta-node-exporter_*.deb"
 
       - uses: alexellis/upload-assets@0.4.0
         if: startsWith(github.ref, 'refs/tags/')
         env:
           GITHUB_TOKEN: ${{ github.token }}
         with:
-          asset_paths: '["vyatta-node_exporter_*.deb"]'
+          asset_paths: '["vyatta-node-exporter_*.deb"]'
