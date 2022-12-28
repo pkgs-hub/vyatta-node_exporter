@@ -23,6 +23,7 @@ jobs:
 
       - name: Build deb
         run: |
+          chmod +x deb/DEBIAN/postinst
           dpkg-deb --build --root-owner-group deb
 
       - name: Rename deb
