@@ -1,2 +1,0 @@
-help: Show node_exporter logs
-run: journalctl -u node_exporter | less
