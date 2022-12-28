@@ -1,2 +1,0 @@
-help: Show node_exporter status
-run: systemctl status node_exporter
