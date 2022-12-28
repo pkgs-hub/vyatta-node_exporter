@@ -2,4 +2,4 @@ Package: vyatta-node-exporter
 Version: 1.5.0-1
 Architecture: amd64
 Maintainer: pkgs-hub <https://github.com/pkgs-hub>
-Description: Nico...
+Description: node_exporter for vyatta
