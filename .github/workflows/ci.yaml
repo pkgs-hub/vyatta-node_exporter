@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - name: Download bin
         run: |
@@ -29,7 +29,7 @@ jobs:
         run: mv deb.deb vyatta-node-exporter_$(dpkg-deb -f deb.deb Version)_$(dpkg-deb -f deb.deb Architecture).deb
 
       - name: Upload deb
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: debian-vyatta-node_exporter
           path: "vyatta-node-exporter_*.deb"
