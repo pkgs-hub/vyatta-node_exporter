@@ -1,3 +1,0 @@
-help: node_exporter configuration
-create: /usr/bin/systemctl enable --now node_exporter
-delete: /usr/bin/systemctl disable --now node_exporter
