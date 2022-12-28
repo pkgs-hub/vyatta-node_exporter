@@ -3,7 +3,7 @@ Description=Node Exporter
 
 [Service]
 EnvironmentFile=/etc/default/node_exporter
-ExecStart=/opt/vatta-node_exporter \$OPTIONS
+ExecStart=/opt/vatta-node_exporter/node_exporter \$OPTIONS
 
 [Install]
 WantedBy=multi-user.target
