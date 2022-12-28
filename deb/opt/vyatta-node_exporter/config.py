@@ -10,6 +10,9 @@ from vyos.util import call
 from vyos.template import render
 from vyos import ConfigError
 from vyos import airbag
+from jinja2 import Template
+
+
 airbag.enable()
 
 config_file = r'/etc/default/node_exporter'
@@ -24,7 +27,6 @@ def get_config(config=None):
         return None
 
     node_exporter = conf.get_config_dict(base, key_mangling=('-', '_'), get_first_key=True)
-    node_exporter['config_file'] = config_file
 
     return node_exporter
 
@@ -39,12 +41,12 @@ def generate(node_exporter):
     if not node_exporter:
         if os.path.isfile(config_file):
             os.unlink(config_file)
-        if os.path.isfile(systemd_override):
-            os.unlink(systemd_override)
-
         return None
 
-    render(config_file, '/opt/vyatta-node_exporter/config.j2', node_exporter)
+    with open('/opt/vyatta-node_exporter/config.j2') as tmpl, open(config_file, 'w') as out:
+        template = Template(tmpl.read()).render(node_exporter=node_exporter)
+        out.write(template)
+
     # Reload systemd manager configuration
     call('systemctl daemon-reload')
 
