@@ -1,2 +1,3 @@
 help: node_exporter configuration
-end: sudo sh -c "${vyshim} /opt/vyatta-node_exporter/config.py"
+# sudo sh -c "${vyshim} /opt/vyatta-node_exporter/config.py"
+end: sudo python3 /opt/vyatta-node_exporter/config.py
