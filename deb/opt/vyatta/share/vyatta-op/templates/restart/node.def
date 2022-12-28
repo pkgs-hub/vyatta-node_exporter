@@ -1,2 +1,0 @@
-help: Restart node_exporter
-run: sudo systemctl restart node_exporter
