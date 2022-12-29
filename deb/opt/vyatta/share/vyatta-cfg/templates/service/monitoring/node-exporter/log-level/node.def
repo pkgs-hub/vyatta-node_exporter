@@ -1,0 +1,5 @@
+type: txt
+help: Only log messages with the given severity or above. One of: [debug, info, warn, error], default is info.
+default: "info"
+syntax:expression: $VAR(@) in "debug", "info", "warn", "error";
+                   "log-level must be debug, info, warn or error"

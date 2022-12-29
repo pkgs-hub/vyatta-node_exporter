@@ -1,0 +1,5 @@
+type: txt
+help: Output format of log messages. One of: [logfmt, json], default is logfmt.
+default: "logfmt"
+syntax:expression: $VAR(@) in "logfmt", "json";
+                   "log-level must be logfmt or json"
