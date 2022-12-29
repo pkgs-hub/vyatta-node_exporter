@@ -1,1 +1,2 @@
+type: txt
 help: Certify that collector.ntp.server address is not a public ntp server

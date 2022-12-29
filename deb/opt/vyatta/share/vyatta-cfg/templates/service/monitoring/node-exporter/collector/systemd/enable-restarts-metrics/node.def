@@ -1,1 +1,2 @@
+type: txt
 help: Enables service unit metric service_restart_total

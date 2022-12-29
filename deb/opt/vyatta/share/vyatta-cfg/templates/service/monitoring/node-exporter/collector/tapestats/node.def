@@ -1,1 +1,2 @@
+type: txt
 help: Enable the tapestats collector (default: enabled).

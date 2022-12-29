@@ -1,2 +1,3 @@
+type: txt
 help: test fixtures to use for wifi collector metrics
 default: ""

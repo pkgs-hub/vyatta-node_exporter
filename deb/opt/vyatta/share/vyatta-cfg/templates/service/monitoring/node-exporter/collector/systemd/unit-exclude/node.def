@@ -1,2 +1,3 @@
+type: txt
 help: Regexp of systemd units to exclude. Units must both match include and not match exclude to be included.
-default: ".+\\.(automount|device|mount|scope|slice)" 
+default: ".+\\.(automount|device|mount|scope|slice)"

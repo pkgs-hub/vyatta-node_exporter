@@ -1,2 +1,3 @@
-help: Regexp of ethtool devices to include (mutually exclusive to device-exclude).
-default: COLLECTOR.ETHTOOL.DEVICE-INCLUDE
+type: txt
+help: Regexp of ethtool devices to exclude (mutually exclusive to device-include).
+default: COLLECTOR.ETHTOOL.DEVICE-EXCLUDE
