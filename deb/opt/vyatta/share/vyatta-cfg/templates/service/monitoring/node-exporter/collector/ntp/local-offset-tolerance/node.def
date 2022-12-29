@@ -1,0 +1,2 @@
+help: Offset between local clock and local ntpd time to tolerate
+default: "1ms"

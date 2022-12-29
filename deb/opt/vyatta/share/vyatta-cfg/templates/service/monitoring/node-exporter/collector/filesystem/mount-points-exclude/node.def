@@ -1,0 +1,2 @@
+help: Regexp of mount points to exclude for filesystem collector.
+default: "^/(dev|proc|run/credentials/.+|sys|var/lib/docker/.+)($|/)"

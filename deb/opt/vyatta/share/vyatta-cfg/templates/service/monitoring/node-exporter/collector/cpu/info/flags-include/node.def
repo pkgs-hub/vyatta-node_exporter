@@ -1,0 +1,2 @@
+help: Filter the `flags` field in cpuInfo with a value that must be a regular expression
+# default: COLLECTOR.CPU.INFO.FLAGS-INCLUDE

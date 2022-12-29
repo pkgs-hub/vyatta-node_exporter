@@ -1,0 +1,2 @@
+help: Regexp of devices to ignore for tapestats.
+default: "^$"

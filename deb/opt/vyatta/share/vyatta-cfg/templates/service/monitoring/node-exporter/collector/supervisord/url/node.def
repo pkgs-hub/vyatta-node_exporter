@@ -1,0 +1,2 @@
+help: XML RPC endpoint.
+default: "http://localhost:9001/RPC2"

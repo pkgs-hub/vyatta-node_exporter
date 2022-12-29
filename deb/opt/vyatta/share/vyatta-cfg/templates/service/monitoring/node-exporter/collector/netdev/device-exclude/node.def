@@ -1,0 +1,2 @@
+help: Regexp of net devices to exclude (mutually exclusive to device-include).
+default: COLLECTOR.NETDEV.DEVICE-EXCLUDE

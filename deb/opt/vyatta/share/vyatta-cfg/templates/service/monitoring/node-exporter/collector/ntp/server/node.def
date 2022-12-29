@@ -1,0 +1,2 @@
+help: NTP server to use for ntp collector
+default: "127.0.0.1"

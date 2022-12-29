@@ -1,0 +1,2 @@
+help: Regexp of devices to ignore for diskstats.
+default: "^(ram|loop|fd|(h|s|v|xv)d[a-z]|nvme\\d+n\\d+p)\\d+$"  

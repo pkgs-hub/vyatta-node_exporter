@@ -1,0 +1,2 @@
+help: Regexp of ethtool devices to include (mutually exclusive to device-exclude).
+default: COLLECTOR.ETHTOOL.DEVICE-INCLUDE

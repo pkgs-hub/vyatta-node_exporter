@@ -1,0 +1,2 @@
+help: perf tracepoint that should be collected
+default: COLLECTOR.PERF.TRACEPOINT

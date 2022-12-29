@@ -1,0 +1,2 @@
+help: NTP protocol version
+default: 4

@@ -1,0 +1,2 @@
+help: Regexp of net devices to ignore for netclass collector.
+default: "^$"
