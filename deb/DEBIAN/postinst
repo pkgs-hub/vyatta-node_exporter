@@ -1,1 +1,2 @@
+chmod +x /opt/vyatta-node_exporter/config.py
 systemctl daemon-reload
