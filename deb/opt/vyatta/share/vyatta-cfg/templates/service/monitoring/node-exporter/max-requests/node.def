@@ -1,5 +1,0 @@
-type: u32
-help: Maximum number of parallel scrape requests. Use 0 to disable, default is 40. (0-10000)
-default: 40
-syntax:expression: $VAR(@) > 0 && $VAR(@) <= 10000; "Maximum amount of parallel scrape requests must be between 1 and 10000"
-val_help: u32:1-10000; Maximum amount of scrape requests.

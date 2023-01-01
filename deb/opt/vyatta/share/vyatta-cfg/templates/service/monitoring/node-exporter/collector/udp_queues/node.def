@@ -1,2 +1,1 @@
-type: txt
 help: Enable the udp_queues collector (default: enabled).

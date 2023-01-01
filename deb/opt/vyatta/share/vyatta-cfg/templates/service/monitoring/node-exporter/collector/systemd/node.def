@@ -1,2 +1,1 @@
-type: txt
 help: Enable the systemd collector (default: disabled).

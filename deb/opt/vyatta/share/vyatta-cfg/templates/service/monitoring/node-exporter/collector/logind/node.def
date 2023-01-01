@@ -1,2 +1,1 @@
-type: txt
 help: Enable the logind collector (default: disabled).
