@@ -23,8 +23,10 @@ jobs:
 
       - name: Build deb
         run: |
+          echo $GITHUB_REF
+          echo ${GITHUB_REF#refs/*/}
           # adjust version in deb/CONTROL
-          sed -i "s|Version:.*|Version: $(echo ${GITHUB_REF#refs/*/} | tr -d "v")|" ./deb/DEBIAN/control
+          sed -i "s|Version:.*|Version: $(echo ${${{github.ref}}#refs/*/} | tr -d "v")|" ./deb/DEBIAN/control
           chmod +x deb/DEBIAN/postinst
           dpkg-deb --build --root-owner-group deb
 
