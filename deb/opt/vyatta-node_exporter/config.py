@@ -44,7 +44,7 @@ def generate(node_exporter):
         return None
 
     with open('/opt/vyatta-node_exporter/config.j2', 'r') as tmpl, open(config_file, 'w') as out:
-        template = Template(tmpl.read()).render(**node_exporter)
+        template = Template(tmpl.read()).render(data=node_exporter)
         out.write(template)
 
     # Reload systemd manager configuration
