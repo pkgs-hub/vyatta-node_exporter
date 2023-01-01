@@ -1,0 +1,3 @@
+type: txt
+help: Only log messages with the given severity or above. One of: [debug, info, warn, error]
+default: info

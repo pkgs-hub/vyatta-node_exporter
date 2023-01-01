@@ -1,0 +1,2 @@
+type: txt
+help: Enable the wifi collector (default: disabled).

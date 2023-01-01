@@ -1,0 +1,3 @@
+type: txt
+help: Regexp of net devices to ignore for netclass collector.
+default: "^$"

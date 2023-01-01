@@ -1,0 +1,3 @@
+type: txt
+help: IP TTL to use while sending NTP query
+default: 1

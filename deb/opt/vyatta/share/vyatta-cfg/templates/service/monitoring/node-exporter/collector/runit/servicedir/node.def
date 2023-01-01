@@ -1,0 +1,3 @@
+type: txt
+help: Path to runit service directory.
+default: "/etc/service"

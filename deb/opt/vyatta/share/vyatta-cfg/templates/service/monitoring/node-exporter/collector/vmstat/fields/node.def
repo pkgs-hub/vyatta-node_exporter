@@ -1,0 +1,3 @@
+type: txt
+help: Regexp of fields to return for vmstat collector.
+default: "^(oom_kill|pgpg|pswp|pg.*fault).*"

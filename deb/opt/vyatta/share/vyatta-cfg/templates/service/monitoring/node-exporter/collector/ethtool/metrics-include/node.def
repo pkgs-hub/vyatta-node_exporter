@@ -1,0 +1,3 @@
+type: txt
+help: Regexp of ethtool stats to include.
+default: ".*"

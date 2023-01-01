@@ -1,0 +1,3 @@
+type: txt
+help: procfs mountpoint.
+default: "/proc"

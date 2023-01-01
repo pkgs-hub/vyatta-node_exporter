@@ -1,0 +1,2 @@
+type: txt
+help: Ignore devices where the speed is invalid. This will be the default behavior in 2.x.

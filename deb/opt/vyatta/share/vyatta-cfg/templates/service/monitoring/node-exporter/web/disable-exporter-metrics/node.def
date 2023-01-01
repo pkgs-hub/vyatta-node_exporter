@@ -1,0 +1,2 @@
+type: txt
+help: Exclude metrics about the exporter itself (promhttp_*, process_*, go_*).
