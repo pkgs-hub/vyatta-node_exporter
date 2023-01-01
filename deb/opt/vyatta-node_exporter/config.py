@@ -26,7 +26,7 @@ def get_config(config=None):
     if not conf.exists(base):
         return None
 
-    node_exporter = conf.get_config_dict(base, key_mangling=('-', '_'), get_first_key=True)
+    node_exporter = conf.get_config_dict(base, get_first_key=True)
 
     return node_exporter
 
