@@ -31,14 +31,14 @@ def get_config(config=None):
     return node_exporter
 
 def verify(node_exporter):
-    if not node_exporter:
+    if node_exporter is None:
         return None
 
     verify_vrf(node_exporter)
     return None
 
 def generate(node_exporter):
-    if not node_exporter:
+    if node_exporter is None:
         if os.path.isfile(config_file):
             os.unlink(config_file)
         return None
@@ -53,7 +53,7 @@ def generate(node_exporter):
     return None
 
 def apply(node_exporter):
-    if not node_exporter:
+    if node_exporter is None:
         # node_exporter is removed in the commit
         call('systemctl stop node_exporter.service')
         return None
