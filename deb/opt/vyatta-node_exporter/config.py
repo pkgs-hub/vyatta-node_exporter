@@ -33,22 +33,6 @@ def get_config(config=None):
 def verify(node_exporter):
     if node_exporter is None:
         return None
-
-    # upstream configuration is required for zia to work as expected
-    if "upstream" not in zia_server:
-        print("ZIA-Server upstream configuration is required!")
-        exit(1)
-        
-    # upstream configuration requires address and port
-    error = False
-    if "address" not in zia_server["upstream"]:
-        print("Missing ZIA-Server upstream address!")
-        error = True
-    if "port" not in zia_server["upstream"]:
-        print("Missing ZIA-Server upstream port!")
-        error = True
-    if error:
-        exit(1)
     
     verify_vrf(node_exporter)
     return None
