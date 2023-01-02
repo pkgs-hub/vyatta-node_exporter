@@ -44,13 +44,11 @@ def generate(node_exporter):
         return None
 
     # merge web/listen-address with subelement web/listen-address/port
-    if 'web' in node_exporter:
-        # {'listen-address': {'0.0.0.0': {'port': '8080'}}
-        if 'listen-address' in node_exporter['web']:
-            address = list(node_exporter['web']['listen-address'].keys())[0]
-            port = node_exporter['web']['listen-address'][address].get("port", 9100)
-            node_exporter['web']['listen-address'] = f"{address}:{port}"
-            del node_exporter['web']['listen-address']['port']
+    # {'web': {'listen-address': {'0.0.0.0': {'port': '8080'}}}
+    if 'web' in node_exporter and 'listen-address' in node_exporter['web']:
+        address = list(node_exporter['web']['listen-address'].keys())[0]
+        port = node_exporter['web']['listen-address'][address].get("port", 9100)
+        node_exporter['web']['listen-address'] = f"{address}:{port}"
 
     with open('/opt/vyatta-node_exporter/config.j2', 'r') as tmpl, open(config_file, 'w') as out:
         template = Template(tmpl.read()).render(data=node_exporter)
