@@ -50,6 +50,9 @@ def generate(node_exporter):
         port = node_exporter['web']['listen-address'][address].get("port", 9100)
         node_exporter['web']['listen-address'] = f"{address}:{port}"
 
+    # remove empty elements
+    #node_exporter = {key: value for key, value in node_exporter.items() if value}
+
     with open('/opt/vyatta-node_exporter/config.j2', 'r') as tmpl, open(config_file, 'w') as out:
         template = Template(tmpl.read()).render(data=node_exporter)
         out.write(template)
